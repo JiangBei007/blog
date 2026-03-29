@@ -2,10 +2,23 @@ import { defineConfig } from 'vitepress';
 
 const sidebar = [
   {
+    text: 'Java',
+    collapsed: false,
+    items: [
+      { text: 'Java 基础', link: '/java-basic/index' },
+      { text: '数据库基础', link: '/database/index' },
+      { text: 'Java 框架与库', link: '/java-framework/index' },
+    ],
+  },
+  {
     text: '基础',
     collapsed: false,
     items: [
+      { text: 'HTML5 新特性', link: '/html/html5-features' },
+      { text: 'CSS 进阶', link: '/css/advanced-css' },
+      { text: 'SCSS 和 Less 函数', link: '/css/scss-less-functions' },
       { text: 'JavaScript', link: '/js/index' },
+      { text: 'JavaScript 深入', link: '/js/advanced-js' },
       { text: 'JavaScript-1', link: '/questions/js1' },
       { text: 'JavaScript-2', link: '/questions/js2' },
       { text: 'Css', link: '/questions/css' },
@@ -32,9 +45,30 @@ const sidebar = [
     ],
   },
   {
+    text: '前端工程化',
+    collapsed: false,
+    items: [{ text: '工程化实践', link: '/engineering/frontend-engineering' }],
+  },
+  {
+    text: '性能优化',
+    collapsed: false,
+    items: [
+      { text: '前端性能优化', link: '/performance/frontend-performance' },
+    ],
+  },
+  {
+    text: '安全',
+    collapsed: false,
+    items: [{ text: '前端安全', link: '/security/frontend-security' }],
+  },
+  {
     text: 'Other',
     collapsed: false,
-    items: [{ text: 'git', link: '/other/git' }],
+    items: [
+      { text: 'git', link: '/other/git' },
+      { text: 'browser', link: '/other/browser' },
+      { text: 'design-pattern', link: '/other/design-pattern' },
+    ],
   },
 ];
 
@@ -48,8 +82,8 @@ const sidebar = [
 // };
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'My Awesome Project',
-  description: 'A VitePress Site',
+  title: "JiangBei's Notes",
+  description: '江北的技术笔记与学习记录',
   srcDir: 'src',
   base: '/blog/',
   lastUpdated: true,
